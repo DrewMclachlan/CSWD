@@ -1,0 +1,32 @@
+{
+  "title": "Load colour data",
+  "navigationLinks": [
+    {
+      "filetype": "Soldiers who Fought",
+      "filename": "soldierdata.json"
+    },
+    {
+      "filetype": "Weapons of destruction",
+      "filename": "germany.img"
+    },
+    {
+      "filetype": "Timeline of the war",
+      "filename": "timeline.html"
+    },
+    {
+      "filetype": "Countries involved",
+      "filename": "img.html"
+    },
+    {
+      "filetype": "Trench Warfare",
+      "filename": "drew.html"
+    },
+    {
+      "filetype": "Quiz",
+      "filename": "quizdata.xml"
+    }
+
+
+  ]
+}
+
