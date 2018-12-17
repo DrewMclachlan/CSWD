@@ -50,3 +50,16 @@ $("body").on('click', '.previous', function () {
     sum.slideback()
 })
 
+$("body").on('click', '.first', function () {
+    sum.slidefirst()
+})
+
+$("body").on('click', '.last', function () {
+    //sum.slidelast()
+   loadmodule.lfile('dm','./img/austria.png')
+})
+
+$("body").on('click', '.home', function () {
+    sum.home()
+})
+

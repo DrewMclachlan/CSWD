@@ -1,7 +1,8 @@
 var pageupdatemodule = pageupdatemodule || {};
     pageupdatemodule = function () {
     var jsonfile;
-    var id;
+
+
     var getJSONFile = function(data) {
         console.log('called')
         var colourListHtml = "<ol>";
@@ -16,13 +17,14 @@ var pageupdatemodule = pageupdatemodule || {};
         return colourListHtml
     };
 
+
     var getJson = function(){
         return jsonfile;
     };
 
 
 
-       var getXMLFile3 = function( data ) {
+    var getXMLFile3 = function( data ) {
             var rootNode = data.documentElement;
             xmlfile = rootNode;
 
@@ -40,7 +42,9 @@ var pageupdatemodule = pageupdatemodule || {};
             qa += "</ul> </p>"
 
             return qa;
-        }
+    };
+
+
 
 
 return {

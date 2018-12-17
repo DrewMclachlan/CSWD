@@ -23,6 +23,23 @@ sum = function () {
         loadmodule.lfile('XML', './assets/timelinedata.xml')
     }
 
+    function slidefirst(){
+        newid = 0;
+        sum.setid(newid)
+        loadmodule.lfile('XML', './assets/timelinedata.xml')
+    }
+
+    function slidelast(){
+        newid = 10;
+        sum.setid(newid)
+        loadmodule.lfile('XML', './assets/timelinedata.xml')
+    }
+
+
+    function home(){
+        loadmodule.lfile('html', './assets/timeline.html')
+    }
+
 
     var slideloader = function( data ) {
         var i = sum.getid()
@@ -41,7 +58,8 @@ sum = function () {
         html += "<p>" + bodyvalue + "</p>";
 
         html += "<br><br>" + "<a href=\"#\" class=\"previous\">Previous &laquo;" +
-            "<a href=\"#\" class=\"next\">Next &raquo;</a>"
+            "<a href=\"#\" class=\"next\">Next &raquo;</a>" +  "<a href=\"#\" class=\"first\">First Slide </a>" +  "<a href=\"#\" class=\"last\">Last Slide</a>"
+        +  "<a href=\"#\" class=\"home\">Home </a>";
         console.log(html);
         return html;
     }
@@ -53,7 +71,10 @@ sum = function () {
         getid:getid,
         sliderloader: slideloader,
         slidenext: slidenext,
-        slideback: slideback
+        slideback: slideback,
+        slidefirst: slidefirst,
+        slidelast: slidelast,
+        home: home
     }
 
 
