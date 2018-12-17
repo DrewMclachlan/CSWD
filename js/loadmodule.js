@@ -99,7 +99,7 @@ function ajaxCallBack() {
                 case "timelinedata.xml":
                     html = getXMLFile2( xhr.responseXML );
                     break;
-                case "soldierdata.json":
+                case "./assets/soldierdata.json":
                     html = getJSONFile( xhr.responseText );
                     break;
                 case "quizdata.xml":
@@ -169,7 +169,7 @@ function getCommandCallBack() {
 
 
 function getColoursCommandFile() {
-    var url = "links.json";
+    var url = "./assets/links.json";
     xhr.open("GET", url, async);
     xhr.onreadystatechange = getCommandCallBack;
     xhr.send(null);

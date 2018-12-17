@@ -3,7 +3,7 @@
   "navigationLinks": [
     {
       "filetype": "Soldiers who Fought",
-      "filename": "soldierdata.json"
+      "filename": "./assets/soldierdata.json"
     },
     {
       "filetype": "Weapons of destruction",
@@ -11,11 +11,11 @@
     },
     {
       "filetype": "Timeline of the war",
-      "filename": "timeline.html"
+      "filename": "./assets/timeline.html"
     },
     {
       "filetype": "Countries involved",
-      "filename": "img.html"
+      "filename": "./assets/img.html"
     },
     {
       "filetype": "Trench Warfare",
@@ -23,7 +23,7 @@
     },
     {
       "filetype": "Quiz",
-      "filename": "quizdata.xml"
+      "filename": "./assets/quizdata.xml"
     }
 
 
