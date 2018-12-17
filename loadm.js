@@ -41,7 +41,6 @@ loadmodule = function() {
 
 
     var ajax = function (fileType, url, callBack) {
-
         xhr.open("GET", url, async);
         xhr.onreadystatechange = callBack;
         xhr.fileType = fileType;
@@ -56,45 +55,6 @@ loadmodule = function() {
         ajax(filetype, filename, ajaxCallBack);
     };
 
-
-    function processCommand(jsonText) {
-        var jsonData = JSON.parse(jsonText);
-        var title = jsonData.title;
-        document.getElementById("menu").innerHTML = title;
-        var links = jsonData.navigationLinks;
-        var colourListHtml = "";
-        var colourButtonsHtml = "";
-        var parameters = "";
-        links.forEach(function (item) {
-            parameters = "\'" + item.filetype + "\', \'" + item.filename +
-                "\'";
-            colourListHtml += "<li class=\"nav-item\" onclick=\"loadmodule.lfile(" + parameters +
-                ");\">" + "<a class=\"nav-link\" href=\"#\">" + item.filetype + "</a>" + "</li>";
-        });
-
-        colourButtonsHtml += "";
-        document.getElementById("test2").innerHTML = colourListHtml;
-        // colourButtonsHtml
-    }
-
-    function getCommandCallBack() {
-        if (xhr.readyState == 4) {
-            if (xhr.status == 200) {
-                processCommand(xhr.responseText);
-            } else {
-                document.getElementById("menu").innerHTML = "XHR failed:" + xhr.statusText + " status:" + xhr.status;
-            }
-        }
-    }
-
-
-    function getColoursCommandFile() {
-        var url = "./assets/links.json";
-        xhr.open("GET", url, async);
-        xhr.onreadystatechange = getCommandCallBack;
-        xhr.send(null);
-    }
-
     var async = true;
     var xhr = (typeof window.XMLHttpRequest == "function")
         ? new XMLHttpRequest()
@@ -105,7 +65,7 @@ loadmodule = function() {
             exit;
         }
         // getting here means everything is ok - so
-        getColoursCommandFile();
+        menuMmodule.getColoursCommandFile();
     }, false);
 
 
@@ -114,9 +74,8 @@ loadmodule = function() {
         ajaxCallBack:ajaxCallBack,
         ajax:ajax,
         lfile:loadFile,
-        processCommand:processCommand,
-        getCommandCallBack:getCommandCallBack,
-        getColoursCommandFile:getColoursCommandFile
+
+
     }
 
 
