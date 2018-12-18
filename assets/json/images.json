@@ -1,0 +1,47 @@
+[
+  {
+    "imgfile": "./assets/img/zepplin.jpg",
+    "alt": "The German Zeppelin",
+    "title": "The Zeppelin airship was one of the biggest and most tremendous weapons of war used in WW1",
+    "facts": "An infesting fact about the Zeppelin bombardment, is that it lead to formation of the R.A.F in the UK. ",
+
+    "description":[
+      "The Zeppelin airship was used to bomb british lands during the war in an attempt to strike fear into the brits at home.",
+      "There first raid on britain was 19th of January 1915. During the time of use they killed more than 500 people and injured thousands.",
+      "At the start of the war they were seen as invincible. It wasn't until brittan worked out the hydrogen inside could be ignited using explosive bullets.",
+      "This discovery is what saw the end of the 2 year reign of the zeppelin."
+      ]
+  },
+  {
+    "imgfile":"./assets/img/tank.jpg",
+    "alt": "A WW1 tanks",
+    "facts":"An interesting fact about tanks, is that the name tank was coined as the initial design looked similar to a steal water tank. ",
+
+    "description": [ "The development of tanks in 1914 was hastened due to the stalemate that had developed on the Western Front of WW1",
+      "Tanks were rolled out onto the battle field by the French in 1917. Over the course of the war the Allies produced thousands of Tanks. While Germany produced 20.",
+      "The tanks used in WW1 were known to be extremely unreliable. As shown by that when the tanks were first deployed out of the 49 on the battle field, only 25 actually moved at the start of attack.",
+      "despite this fact. The tanks created for WW1 became the step stones to the modern tanks of today."
+    ]
+  },
+  {
+    "imgfile":"./assets/img/gas.jpg",
+    "alt": "Poison gas",
+    "facts":"An interesting fact about poison gas, is that after WW1 the use of poison gas was outlawed by international law.",
+
+    "description": [ "Poison gas was used through out WW1. First used on April 22nd 1915, with The Germans firing chlorine gas in the Ypres battle.",
+      "After this event other countries raced to create their own gasses. Chlorine gas attacks the eyes & the respiratory system. The very well known mustard gas does the same and causes blisters on the skin.",
+      "Gas attacks did not kill large numbers of men but was instead employed to break up large squadrons of men & was extremely in doing so.",
+      ""
+    ]
+  },
+  {
+    "imgfile":"./assets/img/subs.jpg",
+    "alt": "o",
+    "facts":"o",
+    "description": ["hello",
+      ""
+    ]
+  }
+
+
+]

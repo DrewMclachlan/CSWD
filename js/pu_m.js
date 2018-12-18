@@ -22,9 +22,15 @@ var pageupdatemodule = pageupdatemodule || {};
         return jsonfile;
     };
 
+        var getImageFile = function( data ) {
+            var imgHTML = "<img src='" + data + "' height='400' width='400'>";
+            return imgHTML;
+        }
 
 
-    var getXMLFile3 = function( data ) {
+
+
+        var getXMLFile3 = function( data ) {
             var rootNode = data.documentElement;
             xmlfile = rootNode;
 
@@ -45,12 +51,27 @@ var pageupdatemodule = pageupdatemodule || {};
     };
 
 
+        var splitfile = function( data ){
+            var jsonObj = JSON.parse(data);
+            var html = "<p>";
+            for(i in jsonObj) {
+                var imgloc = jsonObj[i].imgfile;
+                console.log(jsonObj[i].facts[0])
+                html += "<div>" + pageupdatemodule.getimg(imgloc) + "</div>" + "<div>" + jsonObj[i].description.join('\n') + jsonObj[i].facts + "</div>"
+            }
+            html += "</p>"
+                return html;
+        };
+
+
 
 
 return {
     getsoilders: getJSONFile,
     getquizdata: getXMLFile3,
-    getJson: getJson
+    getJson: getJson,
+    splitfile: splitfile,
+    getimg: getImageFile
 
 }
 

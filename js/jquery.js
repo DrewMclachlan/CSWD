@@ -1,5 +1,6 @@
+var body = $('body')
 
-$("body").on('click', '#soilder', function () {
+$(body).on('click', '#soilder', function () {
     var html = "<div>";
     var name = $(this).text();
     var json = pageupdatemodule.getJson();
@@ -18,7 +19,7 @@ $("body").on('click', '#soilder', function () {
     }
 });
 
-$( "body" ).on('click', '#answer', function() {
+$(body).on('click', '#answer', function() {
     var name = $(this).text();
     var answers = xmlfile.getElementsByTagName("ca");
     value2 = answers[0].childNodes[0].nodeValue;
@@ -33,33 +34,56 @@ $( "body" ).on('click', '#answer', function() {
 });
 
 
-$("body").on('click', '.content', function () {
+$(body).on('click', '.content', function () {
     document.getElementById('content')
     var contentid = $(this).attr('id');
     new sum.setid(contentid);
-    loadmodule.lfile('XML', './assets/timelinedata.xml')
+    loadmodule.lfile('XML', './assets/xml/timelinedata.xml')
 
 
 });
 
-$("body").on('click', '.next', function () {
+$(body).on('click', '.overlay', function () {
+    document.getElementsByClassName('text')
+    var text = $(this).text()
+    console.log(text)
+    var trimstr = $.trim(text)
+    console.log(trimstr);
+
+    if(trimstr === "The United Kingdom"){
+        trimstr = "uk"
+
+    }
+    else if(trimstr === "The United States"){
+        trimstr = "usa"
+    }
+    var filename = './assets/txt/' + trimstr + '.txt'
+    console.log(filename);
+    loadmodule.lfile('txt', filename)
+});
+
+
+
+
+
+
+$(body).on('click', '.next', function () {
     sum.slidenext()
-})
+});
 
-$("body").on('click', '.previous', function () {
+$(body).on('click', '.previous', function () {
     sum.slideback()
-})
+});
 
-$("body").on('click', '.first', function () {
+$(body).on('click', '.first', function () {
     sum.slidefirst()
-})
+});
 
-$("body").on('click', '.last', function () {
-    //sum.slidelast()
-   loadmodule.lfile('dm','./img/austria.png')
-})
+$(body).on('click', '.last', function () {
+    sum.slidelast()
+});
 
-$("body").on('click', '.home', function () {
+$(body).on('click', '.home', function () {
     sum.home()
-})
+});
 

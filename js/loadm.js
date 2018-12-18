@@ -8,21 +8,23 @@ loadmodule = function() {
             if (xhr.status == 200) {
                 console.log(xhr.filename);
                 var html = "";
+                switch (xhr.fileType){
+                    case 'txt':
+                        console.log('working');
+                        //can enter styling for the text here
+                        break
+                }
                 switch (xhr.filename) {
-                    case "image":
-                        html = getImageFile(xhr.responseText);
+                    case "./assets/json/images.json":
+                        html = pageupdatemodule.splitfile(xhr.responseText);
                         break;
-                    case "colours.xml":
-                        console.log(xhr.responseXML)
-                        html = getXMLFile(xhr.responseXML);
-                        break;
-                    case "./assets/timelinedata.xml":
+                    case "./assets/xml/timelinedata.xml":
                         html = sum.sliderloader(xhr.responseXML);
                         break;
-                    case "./assets/soldierdata.json":
+                    case "./assets/json/soldierdata.json":
                         html = pageupdatemodule.getsoilders(xhr.responseText);
                         break;
-                    case "./assets/quizdata.xml":
+                    case "./assets/xml/quizdata.xml":
                         html = pageupdatemodule.getquizdata(xhr.responseXML);
                         break;
                     default:
@@ -54,6 +56,7 @@ loadmodule = function() {
     function loadFile(filetype, filename) {
         ajax(filetype, filename, ajaxCallBack);
     };
+
 
     var async = true;
     var xhr = (typeof window.XMLHttpRequest == "function")

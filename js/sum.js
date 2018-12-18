@@ -14,30 +14,30 @@ sum = function () {
     function slidenext(){
         newid = +id + 1;
         sum.setid(newid);
-        loadmodule.lfile('XML', './assets/timelinedata.xml')
+        loadmodule.lfile('XML', './assets/xml/timelinedata.xml')
     }
 
     function slideback(){
         newid = +id - 1;
         sum.setid(newid)
-        loadmodule.lfile('XML', './assets/timelinedata.xml')
+        loadmodule.lfile('XML', './assets/xml/timelinedata.xml')
     }
 
     function slidefirst(){
         newid = 0;
         sum.setid(newid)
-        loadmodule.lfile('XML', './assets/timelinedata.xml')
+        loadmodule.lfile('XML', './assets/xml/timelinedata.xml')
     }
 
     function slidelast(){
         newid = 10;
         sum.setid(newid)
-        loadmodule.lfile('XML', './assets/timelinedata.xml')
+        loadmodule.lfile('XML', './assets/xml/timelinedata.xml')
     }
 
 
     function home(){
-        loadmodule.lfile('html', './assets/timeline.html')
+        loadmodule.lfile('html', './assets/phtml/timeline.html')
     }
 
 
@@ -58,8 +58,8 @@ sum = function () {
         html += "<p>" + bodyvalue + "</p>";
 
         html += "<br><br>" + "<a href=\"#\" class=\"previous\">Previous &laquo;" +
-            "<a href=\"#\" class=\"next\">Next &raquo;</a>" +  "<a href=\"#\" class=\"first\">First Slide </a>" +  "<a href=\"#\" class=\"last\">Last Slide</a>"
-        +  "<a href=\"#\" class=\"home\">Home </a>";
+            "<a href=\"#\" class=\"next\">Next &raquo;</a>" +  "<br>"+ "<a href=\"#\" class=\"first\">First Slide </a>" +  "<a href=\"#\" class=\"last\">Last Slide</a>"
+        + "<br>" + "<a href=\"#\" class=\"home\">Home </a>";
         console.log(html);
         return html;
     }

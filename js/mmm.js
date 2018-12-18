@@ -14,7 +14,7 @@ menuMmodule = function () {
 
 
     function getColoursCommandFile() {
-        var url = "./assets/links.json";
+        var url = "./assets/json/links.json";
         xhr.open("GET", url, async);
         xhr.onreadystatechange = menuMmodule.getCommandCallBack;
         xhr.send(null);
