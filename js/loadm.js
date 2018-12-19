@@ -24,6 +24,9 @@ loadmodule = function() {
                     case "./assets/json/soldierdata.json":
                         html = pageupdatemodule.getsoilders(xhr.responseText);
                         break;
+                    case "./assets/xml/countries.xml":
+                        html = pageupdatemodule.getcountries(xhr.responseXML);
+                        break;
                     case "./assets/xml/quizdata.xml":
                         html = pageupdatemodule.getquizdata(xhr.responseXML);
                         break;

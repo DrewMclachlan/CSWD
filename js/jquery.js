@@ -49,17 +49,9 @@ $(body).on('click', '.overlay', function () {
     console.log(text)
     var trimstr = $.trim(text)
     console.log(trimstr);
-
-    if(trimstr === "The United Kingdom"){
-        trimstr = "uk"
-
-    }
-    else if(trimstr === "The United States"){
-        trimstr = "usa"
-    }
-    var filename = './assets/txt/' + trimstr + '.txt'
-    console.log(filename);
-    loadmodule.lfile('txt', filename)
+   // console.log(filename);
+    //add set filename
+    loadmodule.lfile('xml', "./assets/xml/countries.xml")
 });
 
 
@@ -87,3 +79,71 @@ $(body).on('click', '.home', function () {
     sum.home()
 });
 
+
+
+$(body).on('submit', '#reg', function (e) {
+    e.preventDefault();
+    console.log('got')
+    var $inputs = $('form :input');
+
+    var values = {};
+    $inputs.each(function () {
+        values[this.name] = $(this).val();
+    });
+    console.log(values);
+
+    var password = values.password
+    var hashpassword = [];
+    for (var i = 0; i < password.length; i++) {
+        var yip = (password.charCodeAt(i) + 15) % 24;
+        var char = String.fromCharCode(97 + yip)
+        hashpassword += char;
+        console.log(hashpassword);
+    }
+
+    add(values.name, hashpassword)
+
+
+});
+
+
+
+$(body).on('submit', '#log', function (e) {
+    e.preventDefault();
+    var $inputs = $('form :input');
+
+    var values = {};
+    $inputs.each(function() {
+        values[this.name] = $(this).val();
+    });
+    console.log("name:", values.lname);
+    console.log(values);
+
+    var password = values.pword
+    var hashpassword = [];
+    for (var i = 0; i < password.length; i++) {
+        var yip = (password.charCodeAt(i) + 15)%24;
+        var char = String.fromCharCode(97 + yip)
+        hashpassword += char;
+
+    }
+    console.log(hashpassword);
+
+    read(values.lname, hashpassword)
+
+    //stop form submission
+
+});
+
+$(body).on('submit', '#input', function (e) {
+    var $inputs = $('form :input');
+
+    var values = {};
+    $inputs.each(function () {
+        values[this.name] = $(this).val();
+    });
+    console.log(values)
+    addUinput(values.input)
+    e.preventDefault();
+
+});

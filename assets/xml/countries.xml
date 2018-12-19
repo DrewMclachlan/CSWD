@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<countries>
+<usa>
+    <title>United Stated of America</title>
+    <side>Fought for the Allies</side>
+    <joined>Joined the war on April 1917</joined>
+    <bb>Americas first major battle in WW1 was the battle of Cantigny. The aim of the battle
+    was too push back the Germans as well as install confidence amoung the British and the french of the Americans</bb>
+    <sl>During the course of WW1 the US lost 116,708 soldiers.</sl>
+</usa>
+<germany>
+    <title>hello</title>
+    <side>good</side>
+</germany>
+</countries>

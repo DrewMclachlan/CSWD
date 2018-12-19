@@ -18,15 +18,17 @@
       "filename": "./assets/phtml/img.html"
     },
     {
-      "filetype": "Trench Warfare",
-      "filename": "drew.html"
-    },
-    {
       "filetype": "Quiz",
       "filename": "./assets/xml/quizdata.xml"
+    },
+    {
+      "filetype": "User Upload",
+      "filename": "./assets/phtml/userupload.html"
+    },
+    {
+      "filetype": "Admin Login",
+      "filename": "./assets/phtml/admin/adminl.html"
     }
-
-
   ]
 }
 

@@ -32,9 +32,8 @@ var pageupdatemodule = pageupdatemodule || {};
 
         var getXMLFile3 = function( data ) {
             var rootNode = data.documentElement;
-            xmlfile = rootNode;
-
             var colours = rootNode.getElementsByTagName("question");
+            xmlfile = rootNode;
             var qa = "<p>";
             value = colours[0].childNodes[0].nodeValue;
             console.log(value)
@@ -63,6 +62,23 @@ var pageupdatemodule = pageupdatemodule || {};
                 return html;
         };
 
+        var getcountries = function(data){
+            console.log(data);
+           var node, childNodes = data.documentElement.childNodes
+            for(var i = 0; i < childNodes.length; i++)
+            {
+                node = childNodes[i];
+                if(node.nodeType !== Node.TEXT_NODE)
+                    console.log(node.tagName)
+                    if(node.tagName === "usa") {
+                        console.log('here');
+                        var html = node.textContent;
+                        return html
+                    }
+            }
+            return 'error'
+        }
+
 
 
 
@@ -71,7 +87,8 @@ return {
     getquizdata: getXMLFile3,
     getJson: getJson,
     splitfile: splitfile,
-    getimg: getImageFile
+    getimg: getImageFile,
+    getcountries: getcountries
 
 }
 
