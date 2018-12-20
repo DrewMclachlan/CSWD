@@ -26,10 +26,6 @@
       "filename": "./assets/phtml/userupload.html"
     },
     {
-      "filetype": "User submitted info",
-      "filename": "./assets/phtml/useruploadedtext.html"
-    },
-    {
       "filetype": "Admin Login",
       "filename": "./assets/phtml/admin/adminl.html"
     }

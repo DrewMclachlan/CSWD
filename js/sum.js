@@ -13,14 +13,19 @@ sum = function () {
 
     function slidenext(){
         newid = +id + 1;
-        sum.setid(newid);
-        loadmodule.lfile('XML', './assets/xml/timelinedata.xml')
+        if(newid !== 11) {
+            console.log('hello')
+            sum.setid(newid);
+            loadmodule.lfile('XML', './assets/xml/timelinedata.xml')
+        }
     }
 
     function slideback(){
-        newid = +id - 1;
-        sum.setid(newid)
-        loadmodule.lfile('XML', './assets/xml/timelinedata.xml')
+        if(newid > 1) {
+            newid = +id - 1;
+            sum.setid(newid)
+            loadmodule.lfile('XML', './assets/xml/timelinedata.xml')
+        }
     }
 
     function slidefirst(){
@@ -60,7 +65,7 @@ sum = function () {
         html += "<br><br>" + "<a href=\"#\" class=\"previous\">Previous &laquo;" +
             "<a href=\"#\" class=\"next\">Next &raquo;</a>" +  "<br>"+ "<a href=\"#\" class=\"first\">First Slide </a>" +  "<a href=\"#\" class=\"last\">Last Slide</a>"
         + "<br>" + "<a href=\"#\" class=\"home\">Home </a>";
-        console.log(html);
+
         return html;
     }
 

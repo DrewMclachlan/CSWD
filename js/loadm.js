@@ -28,7 +28,7 @@ loadmodule = function() {
                         html = pageupdatemodule.getcountries(xhr.responseXML);
                         break;
                     case "./assets/xml/quizdata.xml":
-                        html = pageupdatemodule.getquizdata(xhr.responseXML);
+                        html = pageupdatemodule.getquizdata(xhr.responseXML );
                         break;
                     default:
                         html = xhr.responseText;
@@ -76,10 +76,8 @@ loadmodule = function() {
     }, false);
 
 
-
     return{
-        ajaxCallBack:ajaxCallBack,
-        ajax:ajax,
+
         lfile:loadFile,
 
 

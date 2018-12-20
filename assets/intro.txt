@@ -1,3 +1,27 @@
-Welcome to this interactive web application on the Great war.
+<h2>Welcome to this interactive web application on the Great war</h2>
+<br>
+<br>
 
-There is a large focus
+There is a large focus on interactivity within this web application, so be sure to click around.
+as the timeline, countries involved & soldiers who fought sections have more information than meets the eye!
+<br>
+To start learning about the great war, this small video servers as a good introduction to the topic
+<br>
+<br>
+<iframe width="500" height="315"
+src="https://www.youtube.com/embed/dHSQAEam2yc">
+</iframe>
+<br>
+<br>
+<h3>So why is it called the great war?</h3>
+Why is it called the Great War?
+‘Great’ simply indicated the enormous scale of the conflict, much as we might today talk of a ‘great storm’ or a ‘great flood’.
+<br>
+However, the term also had moral connotations. The Allies believed they were fighting against an evil militarism that had taken hold in Germany. <br>‘Great War’ carried echoes of Armageddon, the biblical Great Battle of Good and Evil to be fought at the end of Time.
+ It was therefore sometimes referred to as ‘the Great War for Civilisation’.
+<br>
+Although ‘Great War’ remained in use after the conflict was over, the moral connotations and implications that it had been ‘a war to end all wars’ fell away as the prospect grew in the 1930s of a second world war.
+
+
+target string
+

@@ -1,10 +1,38 @@
 <?xml version="1.0" standalone="yes"?>
 <quiz>
-    <question>
-        what event has claimed to have brought the USA into WW1
-    </question>
-    <a>The bombing of pearl harbour</a>
-    <a>The Germans winning</a>
-    <a>The sinking of the Lusitania</a>
-    <ca>The sinking of the Lusitania</ca>
+    <question1>
+        what event is claimed to have brought the USA into WW1?
+    </question1>
+    <a1>The bombing of pearl harbour</a1>
+    <a1>The Germans winning</a1>
+    <a1>The sinking of the Lusitania</a1>
+    <ca1>The sinking of the Lusitania</ca1>
+    <question2>
+        Who overall lost the most soldiers in WW1?
+    </question2>
+    <a2>Russia</a2>
+    <a2>Austria</a2>
+    <a2>Germany</a2>
+    <ca2>Russia</ca2>
+    <question3>
+        What nation declared war first?
+    </question3>
+    <a3>Serbia</a3>
+    <a3>Austria-Hungary</a3>
+    <a3>Germany</a3>
+    <ca3>Austria-Hungary</ca3>
+    <question4>
+        What is considered the bloodiest battle of WW1?
+    </question4>
+    <a4>Tannenberg</a4>
+    <a4>Verdun</a4>
+    <a4>Somme</a4>
+    <ca4>Somme</ca4>
+    <question5>
+        Who was the first to sign an armistice
+    </question5>
+    <a5>France</a5>
+    <a5>UK</a5>
+    <a5>Russia</a5>
+    <ca5>Russia</ca5>
 </quiz>
