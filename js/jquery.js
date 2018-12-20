@@ -170,6 +170,8 @@ $(body).on('submit', '#input', function (e) {
 
 });
 
+
+
 $(body).on('click', '#ui', function(e){
     var utext = $(this).text()
     var html = "<h3 id =\"uit\">" + utext + "</h3>";
@@ -177,3 +179,7 @@ $(body).on('click', '#ui', function(e){
     html += "<button onclick=\"adminmod.publish()\">Publish"
     document.getElementById('content').innerHTML = html;
 })
+
+
+
+

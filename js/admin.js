@@ -11,7 +11,9 @@ adminmod = function() {
             getKey(test);
             setTimeout(function(){
                 remove(key)
-            },1000)
+                loadmodule.lfile('html', './assets/phtml/admin/adminpage.html')
+            },500)
+
 
 
     }
@@ -21,7 +23,10 @@ adminmod = function() {
         getKey(usertext)
         setTimeout(function(){
             pub(key, usertext)
-        },1000)
+            loadmodule.lfile('html', './assets/phtml/admin/adminpage.html')
+        },500)
+
+
     }
 
     return{

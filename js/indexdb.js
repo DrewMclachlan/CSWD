@@ -1,3 +1,6 @@
+
+
+
 if (!window.indexedDB) {
     window.alert("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.");
 }
@@ -127,7 +130,9 @@ function readUinput() {
         console.log(event.target.result)
         if (request.result) {
             for (var i in request.result) {
-                results += ("<li id='ui'>" + request.result[i].userinput + "</li>")
+                if(request.result[i].pub != true) {
+                    results += ("<li id='ui'>" + request.result[i].userinput + "</li>")
+                }
             }
             console.log(results)
 
@@ -136,9 +141,10 @@ function readUinput() {
         } else {
             alert("Name couldn't be found in your database!");
         }
-    };
-
+    }
+};
     function loadutext(){
+        console.log('fired');
         var results = "";
         var transaction = db.transaction(["userinput"]);
         var objectStore = transaction.objectStore("userinput");
@@ -151,12 +157,13 @@ function readUinput() {
             if (request.result) {
                 for (var i in request.result) {
                     if(request.result[i].pub === true){
-                        results += "<p>" + request.results[i].userinput + "</p>"
+                        console.log(request.result[i].userinput)
+                        results += "<p>" + request.result[i].userinput + "</p>"
                     }
                 }
                 console.log(results)
 
-               // document.getElementById("load").innerHTML = results;
+               document.getElementById("text").innerHTML = results;
 
             } else {
                 alert("Name couldn't be found in your database!");
@@ -164,4 +171,3 @@ function readUinput() {
         };
     }
 
-};
