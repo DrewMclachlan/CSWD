@@ -24,7 +24,7 @@ var pageupdatemodule = pageupdatemodule || {};
     };
 
     var getImageFile = function( data ) {
-        var imgHTML = "<img src='" + data + "' height='200' width='200'>";
+        var imgHTML = "<img src='" + data + "' class='imgs' height='200' width='300'>";
         return imgHTML;
     };
 
@@ -59,14 +59,14 @@ var pageupdatemodule = pageupdatemodule || {};
 
     var splitfile = function( data ){
         var jsonObj = JSON.parse(data);
-        var html = "<p>";
+        var html = "<div class='row'>";
 
             for(i in jsonObj) {
 
                 var imgloc = jsonObj[i].imgfile;
-                html += "<div class='imgs'>" + pageupdatemodule.getimg(imgloc) + "</div>" + "<div>" + jsonObj[i].description.join('\n') + "<p>"+"<br>"+ jsonObj[i].facts + "</p>" + "</div>"
+                html += "<div>" + pageupdatemodule.getimg(imgloc) + "</div>" + "<div class ='wodtext'>" + jsonObj[i].description.join('\n') + "</div> <p>"+"<br>"+ jsonObj[i].facts + "</p>"
             }
-            html += "</p>"
+            html += "</div>"
             return html;
         };
 

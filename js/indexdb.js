@@ -15,7 +15,7 @@ request.onsuccess = function (event) {
     console.log("success:" + db);
 };
 //the word password is set as the word test, after cyper
-var test = [{name:"drew", password:"lukl"}]
+
 request.onupgradeneeded = function (event) {
     var db = event.target.result;
     var objectStore = db.createObjectStore("cswd", {keyPath: "name"} );
@@ -144,7 +144,6 @@ function readUinput() {
     }
 };
     function loadutext(){
-        console.log('fired');
         var results = "";
         var transaction = db.transaction(["userinput"]);
         var objectStore = transaction.objectStore("userinput");
@@ -158,7 +157,7 @@ function readUinput() {
                 for (var i in request.result) {
                     if(request.result[i].pub === true){
                         console.log(request.result[i].userinput)
-                        results += "<p>" + request.result[i].userinput + "</p>"
+                        results += "<p>" + request.result[i].userinput + "</p>" +"<br>"
                     }
                 }
                 console.log(results)

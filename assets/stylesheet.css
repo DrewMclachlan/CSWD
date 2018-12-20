@@ -65,9 +65,7 @@ ul.timeline > li:before {
     background-color: #008CBA;
 }
 
-.imgs{
 
-}
 
 .soldiers{
     padding: 20px;
@@ -85,6 +83,19 @@ ul.timeline > li:before {
 
 .hlight{
     background-color: yellow;
+}
+
+
+.textbox{
+   background-color:lightgray;
+}
+
+.imgs{
+    position: relative;
+    left:100px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+
 }
 
 #answer{

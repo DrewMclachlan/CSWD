@@ -36,10 +36,12 @@
   },
   {
     "imgfile":"./assets/img/subs.jpg",
-    "alt": "o",
-    "facts":"o",
-    "description": ["hello",
-      ""
+    "alt": "subs",
+    "facts":"An interesting fact about WW1 subs is that 12,850,815 tons of shipping was sunk by U-Boats",
+    "description": ["During the First World War the German government made extensive use of submarines,",
+      "initially against warships and then, as the war progressed, most heavily against merchant shipping. However,",
+      "the sinking of neutral merchantmen eventually led to diplomatic crises with neutral nations and to war between Germany and the United States.,"
+
     ]
   }
 

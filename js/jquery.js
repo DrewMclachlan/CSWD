@@ -38,7 +38,7 @@ $(body).on('click', '#answer', function() {
             loadmodule.lfile('xml', './assets/xml/quizdata.xml')
         }else{
             document.getElementById('content').innerHTML = "Congratulations on completing the quiz, you got: " +
-                correct + " right!"
+                correct + " /5 right!"
             counter = 1;
         }
     } else {
@@ -50,7 +50,7 @@ $(body).on('click', '#answer', function() {
             loadmodule.lfile('xml', './assets/xml/quizdata.xml')
         } else{
             document.getElementById('content').innerHTML = "Congratulations on completing the quiz, you got:" +
-                correct + "right!"
+                correct + " /5 right!"
             counter =1;
         }
     }
@@ -181,6 +181,7 @@ $(body).on('submit', '#search', function (e){
 })
 
 $(body).on('submit', '#input', function (e) {
+    e.preventDefault()
     var $inputs = $('form :input');
 
     var values = {};
@@ -192,15 +193,17 @@ $(body).on('submit', '#input', function (e) {
 
 });
 
-
-
 $(body).on('click', '#ui', function(e){
     var utext = $(this).text()
     var html = "<h3 id =\"uit\">" + utext + "</h3>";
     html += "<button onclick=\"adminmod.test()\">Delete"
     html += "<button onclick=\"adminmod.publish()\">Publish"
     document.getElementById('content').innerHTML = html;
-})
+});
+
+$(body).on('DOMNodeInserted', '.update', function(){
+    loadutext()
+});
 
 
 

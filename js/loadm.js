@@ -15,7 +15,7 @@ loadmodule = function() {
                         break
                 }
                 switch (xhr.filename) {
-                    case "./assets/json/images.json":
+                    case "./assets/json/wod.json":
                         html = pageupdatemodule.splitfile(xhr.responseText);
                         break;
                     case "./assets/xml/timelinedata.xml":
@@ -34,7 +34,7 @@ loadmodule = function() {
                         html = xhr.responseText;
                         break;
                 }
-                document.getElementById("content").innerHTML = html;
+                document.getElementById("content").innerHTML = html
 
             } else {
                 document.getElementById("content").innerHTML = "Request"
