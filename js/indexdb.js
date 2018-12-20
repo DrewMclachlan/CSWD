@@ -54,22 +54,47 @@ function read(name, hpassword) {
 };
 
 
-function remove() {
-    var request = db.transaction(["cswd"], "readwrite")
-        .objectStore("cswd")
-        .delete("02");
+function remove(key) {
+    var request = db.transaction(["userinput"], "readwrite")
+        .objectStore("userinput")
+        .delete(key);
     request.onsuccess = function (event) {
         alert("removed from db");
+        loadmodule.lfile("html",'./assets/phtml/admin/adminpage.html')
     };
     request.onerror = function (event) {
         alert("Unable to remove from db!");
     };
 };
 
+function getKey(item) {
+    var transaction = db.transaction(["userinput"]);
+    var objectStore = transaction.objectStore("userinput");
+    var request = objectStore.getAll()
+    request.onerror = function (event) {
+        alert("Unable to retrieve data from database!");
+    };
+    request.onsuccess = function (event) {
+        console.log(event.target.result)
+        if (request.result) {
+            for (var i in request.result) {
+                if(request.result[i].userinput === item){
+                    var key = request.result[i].id
+                    console.log(key);
+                    adminmod.setkey(key);
+
+                }
+            }
+        } else {
+            alert("Name couldn't be found in your database!");
+        }
+    }
+}
+
 function addUinput(input) {
     var request = db.transaction(["userinput"], "readwrite")
         .objectStore("userinput")
-        .add({userinput: input});
+        .add({userinput: input, pub:false});
     request.onsuccess = function (event) {
         console.log("added to database.");
         document.getElementById('content').innerText = "Thank you for your submission"
@@ -79,6 +104,16 @@ function addUinput(input) {
     }
 };
 
+function pub(key, item){
+    var transaction = db.transaction(["userinput"], "readwrite");
+    var objectStore = transaction.objectStore("userinput");
+    console.log('here');
+    console.log(key);
+    var request = objectStore.put({userinput:item,pub:true, id:key});
+    request.onsuccess = function (event) {
+        console.log("added to database.");
+    };
+}
 
 function readUinput() {
     var results = "";
@@ -92,7 +127,7 @@ function readUinput() {
         console.log(event.target.result)
         if (request.result) {
             for (var i in request.result) {
-                results += ("<li>" + request.result[i].userinput + "</li>")
+                results += ("<li id='ui'>" + request.result[i].userinput + "</li>")
             }
             console.log(results)
 
@@ -102,4 +137,31 @@ function readUinput() {
             alert("Name couldn't be found in your database!");
         }
     };
+
+    function loadutext(){
+        var results = "";
+        var transaction = db.transaction(["userinput"]);
+        var objectStore = transaction.objectStore("userinput");
+        var request = objectStore.getAll()
+        request.onerror = function (event) {
+            alert("Unable to retrieve data from database!");
+        };
+        request.onsuccess = function (event) {
+            console.log(event.target.result)
+            if (request.result) {
+                for (var i in request.result) {
+                    if(request.result[i].pub === true){
+                        results += "<p>" + request.results[i].userinput + "</p>"
+                    }
+                }
+                console.log(results)
+
+               // document.getElementById("load").innerHTML = results;
+
+            } else {
+                alert("Name couldn't be found in your database!");
+            }
+        };
+    }
+
 };

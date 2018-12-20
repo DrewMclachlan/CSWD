@@ -35,6 +35,7 @@ loadmodule = function() {
                         break;
                 }
                 document.getElementById("content").innerHTML = html;
+
             } else {
                 document.getElementById("content").innerHTML = "Request"
                 failed: " + "

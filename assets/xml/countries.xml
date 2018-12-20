@@ -6,10 +6,45 @@
     <joined>Joined the war on April 1917</joined>
     <bb>Americas first major battle in WW1 was the battle of Cantigny. The aim of the battle
     was too push back the Germans as well as install confidence amoung the British and the french of the Americans</bb>
-    <sl>During the course of WW1 the US lost 116,708 soldiers.</sl>
+    <sl>Over the course of WW1 the US lost 53,402 soldiers in combat</sl>
 </usa>
-<germany>
-    <title>hello</title>
-    <side>good</side>
-</germany>
+<Germany>
+    <title>The German Empire</title>
+    <side>Fought for the Central Powers</side>
+    <joined>Joined the war on the in August 1914</joined>
+    <bb>The biggest battle for the German empire during WW1, was the battle of the Somme. In which, the French and British teamed up to
+    take on the Germans</bb>
+    <sl>Over the course of WW1 Germany lost 1,800,000 soldiers in combat</sl>
+</Germany>
+<France>
+    <title>France</title>
+    <side>Fought for the Allies</side>
+    <joined>Joined the war in August 1914</joined>
+    <bb>The French played a part in many key battles during world war one, but one of their most important was the battle of Verdun. In which the french pushed back the Germans
+    armies advances in the longest battle of WW1.</bb>
+    <sl>Over the course of WW1 France lost 1,150,00 soldiers in combat</sl>
+</France>
+    <Russia>
+        <title>Russia</title>
+        <side>Fought for the Allies</side>
+        <joined>Joined the war in July 1914</joined>
+        <bb>One of the largest battles russia took part in during the war was the battle of Tannenberg. In which the fought the German 2nd army and ultimately
+        received a crushing defeat, causing the suicide of their commanding general.</bb>
+        <sl>Over the course of WW1 Russia lost 1,700,000 soldiers in combat</sl>
+    </Russia>
+    <Austria>
+        <title>Austria-Hungary</title>
+        <side>Fought for the Central Powers</side>
+        <joined>Austria-Hungary began WW1 one by declaring was on Serbia</joined>
+        <bb>One of Austria's key battles was the Battle of Kransink, in which they took on the Russian 4th army and won. Leading to Austria first victory in the war.</bb>
+        <sl>Over the course of WW1 Austria-Hungary lost 1,016,200 in combat.</sl>
+    </Austria>
+    <uk>
+        <title>The United Kingdom</title>
+        <side>Fought for the Allies</side>
+        <joined>Britain joined the war in August of 1914</joined>
+        <bb>The biggest battle for the british was the battle of the somme. In which the allies attempted to hasten a victory.
+        The battle of the somme became one of the bloodiest battles in history, with 1,000,000 men being wounded or killed.</bb>
+        <sl>Over the course of WW1 The United Kingdom lost soldiers 744,000 in combat</sl>
+    </uk>
 </countries>

@@ -1,6 +1,7 @@
 var pageupdatemodule = pageupdatemodule || {};
     pageupdatemodule = function () {
     var jsonfile;
+    var cname;
 
 
     var getJSONFile = function(data) {
@@ -70,7 +71,7 @@ var pageupdatemodule = pageupdatemodule || {};
                 node = childNodes[i];
                 if(node.nodeType !== Node.TEXT_NODE)
                     console.log(node.tagName)
-                    if(node.tagName === "usa") {
+                    if(node.tagName === cname) {
                         console.log('here');
                         var html = node.textContent;
                         return html
@@ -79,7 +80,9 @@ var pageupdatemodule = pageupdatemodule || {};
             return 'error'
         }
 
-
+        var setname = function(name){
+                cname = name
+        }
 
 
 return {
@@ -88,7 +91,8 @@ return {
     getJson: getJson,
     splitfile: splitfile,
     getimg: getImageFile,
-    getcountries: getcountries
+    getcountries: getcountries,
+    setname:setname
 
 }
 

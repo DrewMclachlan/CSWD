@@ -49,7 +49,12 @@ $(body).on('click', '.overlay', function () {
     console.log(text)
     var trimstr = $.trim(text)
     console.log(trimstr);
-   // console.log(filename);
+    if(trimstr === "The United Kingdom"){
+        trimstr = 'uk'
+    }else if(trimstr === "The United States"){
+        trimstr = 'usa'
+    }
+    pageupdatemodule.setname(trimstr);
     //add set filename
     loadmodule.lfile('xml', "./assets/xml/countries.xml")
 });
@@ -135,6 +140,23 @@ $(body).on('submit', '#log', function (e) {
 
 });
 
+$(body).on('submit', '#search', function (e){
+    e.preventDefault()
+    console.log('fired');
+
+    var $inputs = $('form :input');
+    var values = {};
+    $inputs.each(function () {
+        values[this.name] = $(this).val();
+    });
+    console.log(values.search);
+
+    searchmod.search(values.search)
+
+
+
+})
+
 $(body).on('submit', '#input', function (e) {
     var $inputs = $('form :input');
 
@@ -147,3 +169,11 @@ $(body).on('submit', '#input', function (e) {
     e.preventDefault();
 
 });
+
+$(body).on('click', '#ui', function(e){
+    var utext = $(this).text()
+    var html = "<h3 id =\"uit\">" + utext + "</h3>";
+    html += "<button onclick=\"adminmod.test()\">Delete"
+    html += "<button onclick=\"adminmod.publish()\">Publish"
+    document.getElementById('content').innerHTML = html;
+})
