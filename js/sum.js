@@ -14,7 +14,6 @@ sum = function () {
     function slidenext(){
         newid = +id + 1;
         if(newid !== 11) {
-            console.log('hello')
             sum.setid(newid);
             loadmodule.lfile('XML', './assets/xml/timelinedata.xml')
         }
